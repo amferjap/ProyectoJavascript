@@ -15,15 +15,19 @@ for (i = 0; i < acc.length; i++) {
 }
 
 // Cuadro de busqueda: Caracteristica JavaScript Nº2
+// Descripción: El Cuadro de busqueda nos permitira que al clickar en una seccion veamos el contenido de dicha sección
 
+// Definimos la funcion y las variables
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
+    // con esto hacemos que al tener una seccion abierta, al abrir otra seccion la que estaba abierta se oculte y solo se vea la que acabamos de abrit
     tabcontent[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
+    // ahora vamos a hacer que cuando pulsemos en otra seccion el color naranja deje de mostrarse en la seccion que se acaba de cerrar
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(cityName).style.display = "block";
