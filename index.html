@@ -54,14 +54,14 @@
           Sed egestas nulla eget mauris fermentum malesuada. Pellentesque bibendum urna eros, sit amet finibus elit bibendum eget. Phasellus ut justo quis elit faucibus rutrum eget eu magna. Mauris condimentum felis sit amet placerat tincidunt. Pellentesque tempor odio a tincidunt vehicula. Nunc ex tortor, blandit ac nisi ut, viverra accumsan nibh. Suspendisse ut accumsan metus. In tincidunt laoreet libero ut sollicitudin. Aliquam quis accumsan justo.
           Donec sit amet sodales erat. Nullam iaculis aliquam ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer vulputate sem diam, in interdum orci auctor at. Aenean faucibus dapibus nulla consequat dignissim. Aliquam lacinia tincidunt orci, non efficitur leo aliquam et. Fusce tristique volutpat eros eget pretium. Nulla tempus mi mi, ut semper ipsum scelerisque quis. Proin ullamcorper justo in enim iaculis, ac aliquet nibh facilisis. Mauris dictum augue non metus scelerisque porta.
         </p>
-        <!-- Tab links -->
-        <div class="tab">
-          <button class="tablinks" onclick="openCity(event, 'economia_de_la_empresa')">Economia de la empresa |<i class='fas fa-building' style='font-size:20px'></i></button>
-          <button class="tablinks" onclick="openCity(event, 'finanzas')">Finanzas |<i class='fas fa-balance-scale' style='font-size:20px'></i></button>
-          <button class="tablinks" onclick="openCity(event, 'impuestos')">Impuestos |<i class='fas fa-euro-sign' style='font-size:20px'></i></button>
-          <button class="tablinks" onclick="openCity(event, 'desempleo')">Desempleo |<i class='fas fa-briefcase' style='font-size:20px'></i></button>
+
+        <div class="pestaña">
+          <button class="pestañabotones" onclick="abrircaja(event, 'economia_de_la_empresa')">Economia de la empresa |<i class='fas fa-building' style='font-size:20px'></i></button>
+          <button class="pestañabotones" onclick="abrircaja(event, 'finanzas')">Finanzas |<i class='fas fa-balance-scale' style='font-size:20px'></i></button>
+          <button class="pestañabotones" onclick="abrircaja(event, 'impuestos')">Impuestos |<i class='fas fa-euro-sign' style='font-size:20px'></i></button>
+          <button class="pestañabotones" onclick="abrircaja(event, 'desempleo')">Desempleo |<i class='fas fa-briefcase' style='font-size:20px'></i></button>
         </div>
-        <div id="economia_de_la_empresa" class="tabcontent">
+        <div id="economia_de_la_empresa" class="pestañacontenido">
           <h3>Economia de la empresa</h3>
           <p>La economía de la empresa es la rama de la ciencia económica que tiene por objeto el estudio de los hechos de naturaleza económica
             que acontecen en la empresa y que trata de explicar de una forma científica sus actividades, sus funciones y los criterios de
@@ -69,7 +69,7 @@
           </p>
         </div>
 
-        <div id="finanzas" class="tabcontent">
+        <div id="finanzas" class="pestañacontenido">
           <h3>Finanzas</h3>
           <p>Las finanzas son una rama de la administración y la economía que estudia el intercambio de capital entre individuos, empresas,
             o Estados y con la incertidumbre y el riesgo que estas actividades conllevan.1 Se dedica al estudio de la obtención de capital
@@ -78,7 +78,7 @@
           </p>
         </div>
 
-        <div id="impuestos" class="tabcontent">
+        <div id="impuestos" class="pestañacontenido">
           <h3>Impuestos</h3>
           <p>El impuesto es una clase de tributo (obligaciones generalmente pecuniarias en favor del acreedor tributario) regido por derecho
             público, que se caracteriza por no requerir una contraprestación directa o determinada por parte de la administración hacendaría
@@ -86,7 +86,7 @@
           </p>
         </div>
 
-        <div id="desempleo" class="tabcontent">
+        <div id="desempleo" class="pestañacontenido">
           <h3>Desempleo</h3>
           <p>Desempleo, desocupación o cesantía, en el mercado de trabajo, hace referencia a la situación del ciudadano
             que carece de empleo y, por lo tanto, de salario. Por extensión, es la parte de la población en edad, condiciones
@@ -110,41 +110,41 @@
         </p>
         <br>
         <div class="fondoslid">
-        <div class="slideshow-container">
-        <div class="mySlides fade">
+        <div class="contenedor-slide">
+        <div class="diapositivas fade">
           <img src="imagenes/1.jpg" alt="equipo" style="width:100%">
           <div class="cuadroimagen">
           <div class="textoimagen">Kim Hyang Loo - Director</div>
           </div>
         </div>
-        <div class="mySlides fade">
+        <div class="diapositivas fade">
           <img src="imagenes/2.jpg" alt="equipo" style="width:100%">
           <div class="cuadroimagen">
           <div class="textoimagen">Kike Suárez - Secretario General</div>
           </div>
         </div>
-        <div class="mySlides fade">
+        <div class="diapositivas fade">
           <img src="imagenes/3.jpg" alt="equipo" style="width:100%">
           <div class="cuadroimagen">
           <div class="textoimagen">Manuela Rodriguez - Administradora de finanzas</div>
           </div>
         </div>
-        <div class="mySlides fade">
+        <div class="diapositivas fade">
           <img src="imagenes/4.jpg" alt="equipo" style="width:100%">
           <div class="cuadroimagen">
           <div class="textoimagen">Jose Antonio Martínez - Recursos Humanos</div>
           </div>
         </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="boton-anterior" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="boton-siguiente" onclick="plusSlides(1)">&#10095;</a>
         </div>
         </div>
         <br>
         <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="punto" onclick="currentSlide(1)"></span>
+          <span class="punto" onclick="currentSlide(2)"></span>
+          <span class="punto" onclick="currentSlide(3)"></span>
+          <span class="punto" onclick="currentSlide(4)"></span>
         </div>
         <br>
         <p class="loreipsum">
