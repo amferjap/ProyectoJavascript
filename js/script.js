@@ -5,7 +5,7 @@
 // Definición de variables:
 
 var acordeon = document.getElementsByClassName("acordeon"); // La variable acordeon tomará su valor de los botones con class "acordeon"
-var i;
+var i; // Variable i (como en powershell/linux) necesaria para el for
 for (i = 0; i < acordeon.length; i++) {
   acordeon[i].addEventListener("click", function() {
 
@@ -17,9 +17,9 @@ for (i = 0; i < acordeon.length; i++) {
 
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") { // Utilizaremos un if para hacer que si el elemento esta ya mostrado (block), se oculte y viceversa
-      panel.style.display = "none";
+      panel.style.display = "none"; // Panel oculto
     } else {
-      panel.style.display = "block";
+      panel.style.display = "block"; // Panel mostrado
     }
   });
 }
